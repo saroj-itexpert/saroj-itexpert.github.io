@@ -25,6 +25,14 @@ header{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%,0 100% );
 }
 
+header nav .left img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+
+}
+
+
 .container{
     max-width: 1152px;
     padding: 0 15px;
