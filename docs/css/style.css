@@ -102,9 +102,9 @@ header nav .branding{
 }
 
 .hero-img{
-    scale: 1.0;
-    width: 25px;
-    height: 25px;
+/*     scale: 1.0; */
+    width: 20px; 
+    height: 20px;
 }
 
 section {
