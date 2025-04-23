@@ -3,124 +3,337 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saroj Maharjan's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8fce74badd.js" crossorigin="anonymous"></script>
+    <title>Portfolio | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
 
 
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- particle js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- typed js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav class="flex items-center justify-between">
-                <div class="left flex items-center">
-<!--                    For Branding Logo -->
-                    <div class="branding">
-                        <img class="hero-img" id="logo" src="" alt=""> 
-                    </div>
-                    <div>
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Pages</a>
-                        <a href="#">Blog</a>
 
-                    </div>
-                </div>
-
-                <div class="right">
-                    <button class="btn btn-primary">Contact</button>
-                </div>
-            </nav>
-
-            <div class="hero flex items-center justify-between">
-                <div class="left flex-1 flex justify-center">
-                     <img src="./images/pp.png" alt="Saroj Maharjan"> 
-                </div>
-
-                <div class="right flex-1 ">
-                    <h6 id="name"></h6>
-                    <h1 id="bio"><span></span> </h1>
-                    <p>Let's work together and make the world better with the aid of amazing softwares.</p>
-                    <div>
-
-                        <button class="btn btn-secondary">
-                            DOWNLOAD CV
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="logo">Saroj Maharjan</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
 
-    <section class="about">
-        <div class="container flex items-center">
-            <div class="flex-1">
-        <img class="about-me-img" src="./images/dp.jpg" alt=""> 
+        <ul class="nav-links" id="nav-links">
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- introdcution section -->
+    <section class="intro" id="intro">
+        <div id="particles-js"></div>
+        <div class="intro-content">
+            <div class="intro-image">
+                <img src="./3_d.jpg" alt="developer">
             </div>
-            <div class="flex-1">
-                <h1>About <span>Me</span></h1>
-                <h3>Hello! I'm Saroj Maharjan.</h3>
-                <h5 id="followersInformation"></h5>
-                <p>I am Saroj Maharjan Living in siddhipur, Lalitpur, I have completed MBA IT from School of Management
-                    Tribhuvan University and BSc.CSIT from Patan Multiple Campus.I am passionate about the emerging technologies.
-                    I have work experience at Nepal Television as a Visual Archive Officer since 2015
-                    August 31 and Computer Officer at Agricultural Development Bank Limited since 2022, July 9.It's been a great 
-                    year of my life to be part of immense technology and in the path oflearning new technologies. I have been working 
-                    with JavaScript , Python, Flutter and Java.I am also a co-founder of Flutter Nepal, an open source community.</p>
-                <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-
-
-
-                </div>
-
+            <div class="intro-text">
+                <h1><span id="typed">Developer</span></h1>
             </div>
-
         </div>
     </section>
 
-    <section class="services">
-        <div class="container">
-            <h1 class="section-heading">
-                <span>Our</span>
-                Services
-            </h1>
-            <p>I provie you with the all the valuable softwares</p>
-            <div class="card-wrapper">
-                <div class="card">
-                    <img src="./images/brush.svg" alt="">
-                    <h2>Graphic Design</h2>
-                    <p>There are many variations of brochures and pamplets that I design for my clients happening.</p>
-                </div>
+    <!-- about section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I am a passionate Full Stack Developer creating responsive and modern web applications. I love building apps
+            that are
+            performant, beautiful, and user-friendly.</p>
+    </section>
+
+    <!-- experience section -->
+    <section class="timeline-section" id="experience">
+        <h2>Work Experience</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Computer Officer - Agricultural Development Bank Limited</h3>
+                <span> 2024 - Present</span>
+                <p>Architecting enterprise-grade cloud solutions with Azure, enhancing system reliability, and mentoring
+                    junior developers
+                    in best practices.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Visual Archive Officer - Nepal Television (NTV)</h3>
+                <span>2018 - 2024</span>
+                <p>Built dynamic social media features using React, GraphQL, and Node.js. Worked closely with the
+                    product team
+                    to drive engagement and performance metrics.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Senior Assistant Computer Operator - Nepal Television (NTV)</h3>
+                <span>2016 - 2018</span>
+                <p>Contributed to scalable e-commerce modules, used AWS Lambda and DynamoDB, and optimized backend
+                    systems for
+                    speed and fault-tolerance.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Web Developer - IT Experts Pvt. Ltd.</h3>
+                <span>2015 - 2016</span>
+                <p>Worked on improving Lighthouse scores for internal dashboards using React and Next.js, and
+                    collaborated in
+                    A/B testing UI variants.</p>
+            </div>
+            <div class="timeline-item">
+                <h3> Computer Teacher - Kopila English Secondary School</h3>
+                <span>2013 - 2015</span>
+                <p>Leading MERN stack projects, collaborating with cross-functional teams, deploying scalable
+                    applications, and
+                    ensuring responsive UI/UX design.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- skills section -->
+    <section class="skills-section" id="skills">
+        <h2>skills</h2>
+        <ul class="skills-list">
+            <!-- Frontend -->
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React.js</li>
+            <li>Redux</li>
+            <li>Tailwind CSS</li>
+            <li>Bootstrap</li>
+
+            <!-- Backend -->
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>Mongoose</li>
+            <li>RESTful APIs</li>
+            <li>JWT Authentication</li>
+            <li>Bcrypt.js</li>
+
+            <!-- Tools & Version Control -->
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Postman</li>
+            <li>ThunderClient</li>
+            <li>VS Code</li>
+
+            <!-- Deployment -->
+            <li>Render</li>
+            <li>Vercel</li>
+            <li>Firebase</li>
+            <li>Netlify</li>
+
+            <!-- Others -->
+            <li>Cloudinary (File Uploads)</li>
+            <li>Razorpay (Payment Gateway)</li>
+            <li>Figma (Basic)</li>
+            <li>Agile Methodology</li>
+        </ul>
+    </section>
+
+    <!-- education section -->
+    <section class="timeline-section" id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>MBA IT - School of Management Tribhuvan University, Kathmandu</h3>
+                <span>2019 - 2022</span>
+                <p>Specialized in Business Administration with Computer Science with focus on AI, system design, and scalable full
+                    stack architectures.
+                    GPA: 3.87
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>B.Sc.CSIT - Patan Multiple Campus, Lalitpur</h3>
+                <span>2011 - 2015</span>
+                <p>Major in Computer Science. Built strong foundation in data structures, algorithms, and software
+                    engineering.
+                    GPA: 8.34</p>
+            </div>
+            <div class="timeline-item">
+                <h3>12th - MOLIHSS</h3>
+                <span>2009-2011</span>
+                <p>Completed with 66.67%, stream: Science with Computer Science.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>10th - MOLISS</h3>
+                <span>2019</span>
+                <p>Completed with 81.88%, developed interest in coding and computers.</p>
             </div>
         </div>
+
     </section>
+
+    <!-- project section -->
+    <section class="projects-section" id="projects">
+        <h2>Projects</h2>
+       
+        <div class="project">
+            <h3>Todo List App</h3>
+            <p>Built with React.js and localStorage. Minimalistic and responsive task manager.</p>
+            <div class="project-buttons">
+                <a href="https://kamesh-tau.vercel.app/" target="_blank" class="btn-live">Live</a>
+                <a href="https://github.com/sumanmalakar/Suman" target="_blank" class="btn-code">Code</a>
+            </div>
+        </div>
+        <div class="project">
+            <h3>E-Commerce App</h3>
+            <p>Built with React.js and localStorage. Minimalistic and responsive task manager.</p>
+            <div class="project-buttons">
+                <a href="https://kamesh-tau.vercel.app/" target="_blank" class="btn-live">Live</a>
+                <a href="https://github.com/sumanmalakar/Suman" target="_blank" class="btn-code">Code</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- contact section -->
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-subtitle">
+            Have a project in mind or want to say hello? Fill the form below!
+        </p>
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <textarea type="text" placeholder="Your Message" rows="5" required> </textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <p> &copy;2025 All Rights Reserved | Design & Develop by 
+            <span class="brand">
+                Web Dev Mastery
+            </span>
+        </p>
+        <div class="socials">
+            <a href="">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
     <script>
-        fetch("https://api.github.com/users/saroj-itexpert")
-            .then(response => response.json())
-            .then(function (data) {
-                console.log(data)
-                let followersCount = data['followers'];
-                let followersInfo = `I have been followed by ${followersCount} followers.`;
-                document.getElementById('logo').src = data['avatar_url'];
-                document.getElementById('name').textContent = data['name'];
-                document.getElementById('bio').textContent = data['bio'];
-            })
+        var typed = new Typed("#typed", {
+            strings: ["I'm a Full Stack Developer,", "I build responsive websites", "I love MERN Stack"],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        })
+
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click",()=>{
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
+
+        // ParticlesJS config
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 250 },
+                color: { value: ["#4ea8de", "#ff4c60", "#3deabf", "#c084fc", "#facc15"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.8,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 10,
+                        opacity_min: 0.3,
+                        sync: false
+                    }
+                },
+                size: { value: 3 },
+                line_linked: {
+                    enable: true,
+                    distance: 130,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1,
+                },
+                move: {
+                    enable: true,
+                    speed: 10,
+                },
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab" // cool interactive effect
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 200,
+                        line_linked: {
+                            opacity: 0.4
+                        }
+                    },
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    }
+                }
+            },
+            retina_detect: true,
+        });
+
     </script>
+</body>
+
+</html>
